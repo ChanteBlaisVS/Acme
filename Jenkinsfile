@@ -8,11 +8,10 @@ def customImage;
     
     stage ('Build Image') {
         //customImage = docker.build("acme:test")
-        customImage = "acme:test"
     }   
         
     stage ('Black Duck Scan') {
-        customImage.inside {
+        docker.image("acme:test").inside {
          sh """
          export DETECT_LATEST_RELEASE_VERSION=4.1.0
          curl -O https://artifactory.core.rcsops.com/artifactory/hub-detect/hub-detect-virtustream.sh
