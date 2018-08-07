@@ -8,6 +8,7 @@ def customImage;
     
     stage ('Build Image') {
         //customImage = docker.build("acme:test")
+        customImage = "acme:test"
     }   
         
     stage ('Black Duck Scan') {
