@@ -25,7 +25,8 @@ def customImage;
 --detect.project.name=Acme \
 --detect.code.location.name="jenkins_acme-1.0" \
 --detect.project.codelocation.delete.old.names=true \
---detect.source.path=/usr/src/app
+--detect.source.path=/usr/src/app \
+--detect.hub.signature.scanner.exclusion.patterns=/flow-typed/
          """    
         }   
      }
