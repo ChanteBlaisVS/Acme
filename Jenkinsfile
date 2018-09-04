@@ -22,7 +22,7 @@ def customImage;
 --blackduck.hub.proxy.port=3128 \
 --blackduck.hub.api.token=N2E2MDkyODktNGZlNi00ZmNiLThhNDUtM2I5M2NmNjhiNTkwOmE3ZTBlYzAwLTRjOWEtNDhlNS1hNDkxLWE1ZjcwOWE3YzU1NA== \
 --detect.project.version.name=1.0 \
---detect.project.name=Acme-Backup \
+--detect.project.name=Acme \
 --detect.code.location.name="jenkins_acme-1.0" \
 --detect.project.codelocation.delete.old.names=true \
 --detect.source.path=/usr/src/app 
