@@ -7,7 +7,7 @@ def customImage;
     }
     
     stage ('Build Image') {
-        echo $WORKSPACE
+        echo ${WORKSPACE}
     }   
         
     stage ('Black Duck Scan') {
