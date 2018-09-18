@@ -7,7 +7,7 @@ def customImage;
     }
     
     stage ('Build Image') {
-        //customImage = docker.build("acme:test")
+        echo $WORKSPACE
     }   
         
     stage ('Black Duck Scan') {
