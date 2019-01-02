@@ -13,7 +13,6 @@ def customImage;
     stage ('Black Duck Scan') {
         docker.image("acme:test").inside {
          sh """
-         export DETECT_LATEST_RELEASE_VERSION=4.4.2
          curl -s https://blackducksoftware.github.io/hub-detect/hub-detect.sh
          chmod +x hub-detect.sh 
          ./hub-detect.sh \
