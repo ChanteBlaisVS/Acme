@@ -13,7 +13,7 @@ def customImage;
     stage ('Black Duck Scan') {
         docker.image("acme:test").inside {
          sh """
-         curl -s https://blackducksoftware.github.io/hub-detect/hub-detect.sh
+         curl -O https://blackducksoftware.github.io/hub-detect/hub-detect.sh
          chmod +x hub-detect.sh 
          ./hub-detect.sh \
 --blackduck.url='https://bduck01.core.rcsops.com' \
