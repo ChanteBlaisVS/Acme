@@ -13,7 +13,7 @@ def customImage;
     stage ('Black Duck Scan') {
         docker.image("acme:test").inside {
          sh """
-         export DETECT_LATEST_RELEASE_VERSION=5.0.1
+         //export DETECT_LATEST_RELEASE_VERSION=5.0.1
          curl -O https://artifactory.core.rcsops.com/artifactory/hub-detect/hub-detect-virtustream.sh
          chmod +x hub-detect-virtustream.sh 
          ./hub-detect-virtustream.sh \
