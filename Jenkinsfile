@@ -14,6 +14,7 @@ def customImage;
         docker.image("acme:test").inside {
          sh """
          curl -O https://artifactory.core.rcsops.com/artifactory/hub-detect/hub-detect-virtustream.sh
+         export DETECT_LATEST_RELEASE_VERSION=5.0.1
          chmod +x hub-detect-virtustream.sh 
          ./hub-detect-virtustream.sh \
 --blackduck.url='https://bduck01.core.rcsops.com' \
