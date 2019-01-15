@@ -1,6 +1,6 @@
 node ('docker2'){
 
-def customImage;
+def myBuildEnv = docker.image("acme-dev-local.dkr.core.rcsops.com/ubuntu/bduck")
     
     stage ('Checkout SCM') {
         checkout scm        
@@ -11,7 +11,7 @@ def customImage;
     }   
         
     stage ('Black Duck Scan') {
-        docker.image("acme:test").inside {
+        myBuildEnv.inside {
          sh """
          curl -O https://artifactory.core.rcsops.com/artifactory/hub-detect/hub-detect-virtustream.sh
          export DETECT_LATEST_RELEASE_VERSION=5.0.1
