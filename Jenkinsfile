@@ -11,7 +11,7 @@ def myImage = docker.image("acme-dev-local.dkr.core.rcsops.com/jdk/bduck")
     }   
         
     stage ('Black Duck Scan') {
-        myImage.inside {
+        docker.image("acme:test").inside {
          sh """
          curl -O https://artifactory.core.rcsops.com/artifactory/hub-detect/hub-detect-virtustream.sh
          export DETECT_LATEST_RELEASE_VERSION=5.0.1
@@ -24,7 +24,8 @@ def myImage = docker.image("acme-dev-local.dkr.core.rcsops.com/jdk/bduck")
 --detect.project.version.name=2.0 \
 --detect.project.name=Acme \
 --detect.code.location.name="jenkins_acme-2.0" \
---detect.project.codelocation.delete.old.names=true
+--detect.project.codelocation.delete.old.names=true \
+--detect.source.path=/usr/src/app 
          """    
         }   
      }
