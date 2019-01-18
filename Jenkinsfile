@@ -10,12 +10,12 @@ def myImage = docker.image("acme-dev-local.dkr.core.rcsops.com/jdk/bduck")
     }
     
     stage ('Build Image') {
-        //sh 'echo ${WORKSPACE}'
-        docker.build("acme:test")
+        sh 'echo ${WORKSPACE}'
+        //docker.build("acme:test")
     }   
         
     stage ('Black Duck Scan') {
-        docker.image("acme:test").inside {
+        myImage.inside {
          sh """
          mkdir signature_scanner
          curl -O https://artifactory.core.rcsops.com/artifactory/hub-detect/hub-detect-virtustream.sh
