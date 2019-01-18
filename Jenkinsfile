@@ -28,7 +28,8 @@ def myImage = docker.image("acme-dev-local.dkr.core.rcsops.com/jdk/bduck")
 --detect.project.version.name=3.0 \
 --detect.project.name=Acme \
 --detect.code.location.name="jenkins_acme-3.0" \
---detect.project.codelocation.delete.old.names=true 
+--detect.project.codelocation.delete.old.names=true \
+--detect.source.path=/usr/src/app 
          """    
         }   
      }
