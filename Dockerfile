@@ -7,7 +7,7 @@ RUN apt-get install -y curl \
   && export PATH="$PATH:/usr/lib/node_modules/npm/bin" 
 
 # Create app directory
-WORKDIR /usr/src/app
+#WORKDIR /usr/src/app
 
 # Install app dependencies
 COPY package*.json ./
