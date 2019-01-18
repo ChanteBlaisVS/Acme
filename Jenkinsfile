@@ -10,7 +10,8 @@ def myImage = docker.image("acme-dev-local.dkr.core.rcsops.com/jdk/bduck")
     }
     
     stage ('Build Image') {
-        sh 'echo ${WORKSPACE}'
+        //sh 'echo ${WORKSPACE}'
+        docker.build("acme:test")
     }   
         
     stage ('Black Duck Scan') {
