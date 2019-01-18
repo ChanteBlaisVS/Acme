@@ -30,7 +30,6 @@ def myImage = docker.image("acme-dev-local.dkr.core.rcsops.com/jdk/bduck")
 --detect.project.name=Acme \
 --detect.code.location.name="jenkins_acme-3.0" \
 --detect.project.codelocation.delete.old.names=true \
---detect.source.path=/usr/src/app \
 --blackduck.signature.scanner.local.path=/signature_scanner \
 --detect.blackduck.signature.scanner.exclusion.patterns=/signature_scanner/
          """    
