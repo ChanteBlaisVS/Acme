@@ -1,6 +1,9 @@
 node ('docker2'){
 
 def myImage = docker.image("acme-dev-local.dkr.core.rcsops.com/jdk/bduck")
+    stage ('Clean Working Directory') {
+        deleteDir()
+    }
     
     stage ('Checkout SCM') {
         checkout scm        
