@@ -18,7 +18,7 @@ def myImage = docker.image("acme-dev-local.dkr.core.rcsops.com/jdk/bduck")
         myImage.inside {
          sh """
          curl -O https://artifactory.core.rcsops.com/artifactory/hub-detect/hub-detect-virtustream.sh
-         export DETECT_LATEST_RELEASE_VERSION=5.0.1
+         export DETECT_LATEST_RELEASE_VERSION=5.2.0
          chmod +x hub-detect-virtustream.sh 
          ./hub-detect-virtustream.sh \
 --blackduck.url='https://bduck01.core.rcsops.com' \
